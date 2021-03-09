@@ -5,13 +5,18 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { LoginComponent } from './login/login.component';
+import {HomepageComponent} from "./homepage/homepage.component";
+import {InformationComponent} from "./information/information.component";
 
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
+      component: HomepageComponent
   },
+    {
+      path: 'information',
+        component: InformationComponent
+    },
   {
     path: '',
     component: AdminLayoutComponent,

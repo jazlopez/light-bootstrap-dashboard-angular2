@@ -7,12 +7,15 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { NavbarModule } from './shared/navbar/navbar.module';
 import { FooterModule } from './shared/footer/footer.module';
+import { PublicNavbarModule } from './shared/public-navbar/public-navbar.module';
 import { SidebarModule } from './sidebar/sidebar.module';
 
 import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { LoginComponent } from './login/login.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import {InformationComponent} from './information/information.component';
 
 @NgModule({
   imports: [
@@ -21,6 +24,7 @@ import { LoginComponent } from './login/login.component';
     RouterModule,
     HttpClientModule,
     NavbarModule,
+      PublicNavbarModule,
     FooterModule,
     SidebarModule,
     AppRoutingModule
@@ -28,7 +32,9 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    LoginComponent
+    LoginComponent,
+      HomepageComponent,
+      InformationComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
